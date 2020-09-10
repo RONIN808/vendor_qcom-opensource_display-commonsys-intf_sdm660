@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2020, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2011-2021, The Linux Foundation. All rights reserved.
  * Not a Contribution
  *
  * Copyright (C) 2008 The Android Open Source Project
@@ -162,6 +162,10 @@ inline int roundUpToPageSize(int x) {
 #define HAL_PIXEL_FORMAT_NV12_UBWC_FLEX_2_BATCH 0x128
 #define HAL_PIXEL_FORMAT_NV12_UBWC_FLEX_4_BATCH 0x129
 #define HAL_PIXEL_FORMAT_NV12_UBWC_FLEX_8_BATCH 0x130
+
+// FSC Formats
+#define HAL_PIXEL_FORMAT_RGB888_UBWC_FSC 0x131
+#define HAL_PIXEL_FORMAT_RGB101010_UBWC_FSC 0x132
 
 // v4l2_fourcc('Y', 'U', 'Y', 'L'). 24 bpp YUYV 4:2:2 10 bit per component
 #define HAL_PIXEL_FORMAT_YCbCr_422_I_10BIT 0x4C595559
