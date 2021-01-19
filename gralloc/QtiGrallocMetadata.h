@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 The Linux Foundation. All rights reserved.
+ * Copyright (c) 2020-2021 The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -168,6 +168,24 @@ typedef struct ReservedRegion {
   uint32_t size;
   uint8_t data[RESERVED_REGION_SIZE];
 } ReservedRegion;
+
+#define YCBCR_LAYOUT_ARRAY_SIZE 2
+struct qti_ycbcr {
+  void *y;
+  void *cb;
+  void *cr;
+  uint32_t yStride;
+  uint32_t cStride;
+  uint32_t chromaStep;
+};
+
+/* Color Space Macros */
+#define HAL_CSC_ITU_R_601 0
+#define HAL_CSC_ITU_R_601_FR 1
+#define HAL_CSC_ITU_R_709 2
+#define HAL_CSC_ITU_R_709_FR 3
+#define HAL_CSC_ITU_R_2020 4
+#define HAL_CSC_ITU_R_2020_FR 5
 
 #define METADATA_SET_SIZE 512
 
