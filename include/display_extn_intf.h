@@ -41,6 +41,8 @@
 
 namespace composer {
 
+using FpsMitigationCallback = std::function<void(float)>;
+
 struct LayerFlags {
   bool secure_camera = false;
   bool secure_video = false;
@@ -85,6 +87,8 @@ class DisplayExtnIntf {
   virtual int EndDraw(uint32_t display_id, const FBTSlotInfo &fbt_current) = 0;
   virtual void SendCompositorPid() = 0;
   virtual bool IsSmartDisplayConfig(uint32_t display_id) = 0;
+  virtual void SetFpsMitigationCallback(const FpsMitigationCallback callback,
+                                        std::vector<float> fps_list) = 0;
 
  protected:
   virtual ~DisplayExtnIntf() { }
