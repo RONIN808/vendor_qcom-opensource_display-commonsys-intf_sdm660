@@ -138,6 +138,7 @@ struct MetaData_t {
   bool isVendorMetadataSet[METADATA_SET_SIZE];
   uint64_t reservedSize;
   VideoTimestampInfo videoTsInfo;
+  int32_t videoEarlyNotifyLineCount;
 };
 
 namespace qtigralloc {
